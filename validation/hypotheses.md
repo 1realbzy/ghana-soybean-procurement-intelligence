@@ -1,11 +1,11 @@
-# Hypotheses
+# Falsifiable hypotheses
 
-| ID | Hypothesis | Must be true | Evidence required | Test | Falsifier |
-|----|------------|--------------|-------------------|------|-----------|
-| H1 | Processors lack sufficiently reliable visibility into potential local soy supply | Officers cannot name timely sources for a material share of needs | Interview sample; time-motion of search | Structured interviews (n target TBD) | Officers report visibility is already adequate |
-| H2 | Aggregating production, procurement, and market info improves planning | Decisions change with better info | Before/after planning artifacts | Pilot with shadow mode | No change in plans/errors |
-| H3 | AI interface reduces effort to retrieve fragmented info | Time-on-task falls vs status quo | Timed tasks | Usability test | No significant time/quality gain |
-| H4 | Efficient open-weight models can deliver useful grounded answers under local constraints | Accuracy/latency/cost acceptable | Eval set + hardware profile | Bench on target infra | Fails accuracy or cost gates |
-| H5 | Processors/supply organisations would adopt such a system if reliable | Stated intent + pilot usage | Interviews + pilot logs | Pilot agreement | Refusal / non-use |
+| ID | Hypothesis | Falsified if |
+|----|------------|--------------|
+| H1 | For a majority of interviewed processors, inability to find or confirm suitable local supply in time ranks among the top three causes of grain shortfalls | Capital, quality rejects, export offtake, or policy dominate; visibility rarely cited |
+| H2 | Processors cannot currently obtain timely quantity/location/quality signals for a material share of intended local purchases | Adequate signals already flow via brokers, phone, or contracts |
+| H3 | Earlier trusted supply/quality/timing information changes purchase plans or search behaviour in a shadow exercise | Plans and behaviour unchanged |
+| H4 | Aggregators or producer organisations can and would share usable lot- or network-level data under workable consent | They refuse, cannot, or data are too unreliable |
+| H5 | Processors would adopt a paid or actively used intelligence workflow if accuracy/trust thresholds are met | Stated non-interest and/or non-use in a pilot |
 
-**Current status of H1–H5: NOT VALIDATED.**
+**Status: none validated.**

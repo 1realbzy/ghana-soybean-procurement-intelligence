@@ -1,29 +1,9 @@
-# Mistral strategy (PROPOSED)
+# Mistral strategy (candidate)
 
-## Role of Mistral open-weight models
+Open-weight models (including Mistral family checkpoints) are **candidates** if validation shows a language/RAG workflow is needed.
 
-| Task | Use Mistral? | Why |
-|------|--------------|-----|
-| Natural-language query understanding | Yes | Flexible intent parsing |
-| RAG answers with citations | Yes | Grounded synthesis over docs/tables |
-| Requirement extraction from text | Yes | Semi-structured intake |
-| Multilingual prompts (e.g. English + local languages) | Conditional | Only if evaluation passes |
-| Forecasting tonnage/price | **No** | Numerical calibration needed |
-| Match ranking | **No (primary)** | Use interpretable scorers; LLM may explain |
-| Inventing missing statistics | **Never** | Hallucination risk |
+Possible roles: NL interaction, extraction, retrieval-grounded answers, multilingual prompts only after evaluation.
 
-## Why open weights
+Not claimed: integration, fine-tuning on Ghana soy data, or that Mistral is required for the venture to make sense.
 
-- Deployable under local control (sovereignty narrative aligned with African accelerator goals).  
-- Cost/latency tuning on modest GPUs.  
-- Auditability of prompts, retrieval, and refusal behaviour.
-
-## What is not claimed
-
-- That any Mistral model is already fine-tuned on Ghana soy data.  
-- That multilingual African-language performance is proven for this domain.  
-- That Mistral alone solves forecasting.
-
-## Model selection (to be evaluated, not pre-announced as final)
-
-Evaluate instruction-tuned open weights appropriate to licence and hardware (e.g. small/medium Mistral family checkpoints current at prototype time). Selection criterion: grounded-answer accuracy and latency on a Ghana soy eval set—not marketing names.
+Selection later: grounded-answer accuracy, latency, cost, and deployability under partner constraints—not brand preference.

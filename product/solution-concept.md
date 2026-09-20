@@ -1,38 +1,17 @@
-# Solution concept (PROPOSED)
+# Solution concept (hypothesis)
 
-## One-liner
+## Conditional premise
 
-A **procurement intelligence** system that helps Ghanaian soybean processors turn fragmented supply, market, and document information into grounded answers and planning views—using Mistral open-weight models for language/RAG tasks and classical ML for numerical forecasting and matching.
+If primary research shows that information, visibility, and coordination are material and addressable constraints for soybean processors, then a useful product is a **procurement intelligence** layer—not a marketplace, lender, or offtake guarantor.
 
-## What it is
+## Intended job
 
-| Capability | Status |
-|------------|--------|
-| Natural-language procurement queries grounded in retrieved data | PROPOSED |
-| Structured views of supply nodes (when consented data exist) | PROPOSED |
-| Requirement extraction from processor intake forms / emails | PROPOSED |
-| Forecasts of regional availability / price indicators | PROPOSED (ML—not LLM) |
-| Match suggestions: requirement ↔ aggregator/producer lots | PROPOSED |
-| Risk flags (export competition, quality mismatch, logistics) | PROPOSED |
+Help a processor state what they need (tonnage, window, quality, delivery point, constraints), retrieve relevant supply and market context with provenance, and shortlist sourcing options under explicit uncertainty.
 
-## What it is not
+## Out of scope (validation stage)
 
-- Not a live marketplace or escrow  
-- Not a credit product  
-- Not an agronomy advisory app first  
-- Not a claim that beans will appear because a dashboard exists  
-- Not deployed software
+Executing trades; credit scoring; guaranteeing supply or price; claiming impact on plant utilisation.
 
-## User value hypothesis
+## Status
 
-If processors can see *earlier and more reliably* where suitable beans may be secured—quantity, timing, quality tags, indicative prices, logistics—they can plan purchases, negotiate with aggregators, and allocate working capital better than with phone/WhatsApp-only discovery.
-
-**Falsifiable:** see validation hypotheses H1–H5.
-
-## Design principles
-
-1. **Evidence labels in the UI** (KNOWN vs estimate vs missing).  
-2. **Numbers from tables/models; prose from LLMs with citations.**  
-3. **Consented private data never trained into public weights without agreement.**  
-4. **Low-bandwidth modes** (compact text, cached districts, offline packs).  
-5. **Local/sovereign deployment options** via open weights.
+Concept only. Not built. Not validated with users.

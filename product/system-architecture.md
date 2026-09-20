@@ -1,49 +1,22 @@
-# System architecture (CONCEPT ONLY)
+# System architecture (proposed)
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                     User interface                       │
-│            (web / USSD-lite / WhatsApp later)            │
-└───────────────────────────┬─────────────────────────────┘
-                            │
-┌───────────────────────────▼─────────────────────────────┐
-│              Procurement intelligence layer              │
-│     (answers, shortlists, alerts, uncertainty flags)     │
-└───────────────┬─────────────────────────┬───────────────┘
-                │                         │
-┌───────────────▼──────────┐   ┌──────────▼───────────────┐
-│ Mistral LM layer (PROPOSED)│   │ Classical ML layer       │
-│ - NL understanding         │   │ - supply/demand forecast │
-│ - RAG grounded answers     │   │ - price indicators       │
-│ - requirement extraction   │   │ - match scoring          │
-│ - doc summarisation        │   │ - risk heuristics        │
-└───────────────┬──────────┘   └──────────┬───────────────┘
-                │                         │
-┌───────────────▼─────────────────────────▼───────────────┐
-│     Retrieval index + structured agricultural data       │
-└───────────────────────────┬─────────────────────────────┘
-                            │
-┌───────────────────────────▼─────────────────────────────┐
-│        Validation / normalisation / provenance           │
-└───────────────────────────┬─────────────────────────────┘
-                            │
-┌───────────────────────────▼─────────────────────────────┐
-│ Ingestion: public stats, consented ERP/CSV, docs, GIS,   │
-│ weather, price feeds (each with licence & consent tags)  │
-└─────────────────────────────────────────────────────────┘
+User interface
+    ↓
+Procurement intelligence layer (answers, shortlists, alerts, uncertainty)
+    ↓
+Language/model layer (candidate)  ↔  Classical forecast/match/risk methods
+    ↓
+Retrieval index + structured agricultural data
+    ↓
+Validation / normalisation / provenance
+    ↓
+Ingestion (public stats, consented private records, documents, geo/weather)
 ```
 
-## Implementation status
+| Component | Status |
+|-----------|--------|
+| All layers above | Proposed — not implemented in this repository |
+| Stub APIs / demo backends | Intentionally omitted |
 
-| Layer | Status |
-|-------|--------|
-| All boxes above | **PROPOSED** — not implemented in this repository |
-| Fake services / stub APIs | **Intentionally omitted** (no theatre code) |
-
-## Deployment options (PROPOSED)
-
-- **Controlled cloud** in-region with encryption and access logs  
-- **On-prem / private VPC** for processor data  
-- **Edge-light clients** caching district packs  
-
-Choice depends on partner security requirements—not decided.
+Deployment (cloud vs on-prem vs edge-light) is undecided and depends on partner security requirements after validation.

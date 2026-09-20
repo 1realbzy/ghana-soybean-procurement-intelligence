@@ -1,19 +1,13 @@
-# Evaluation framework (PROPOSED metrics)
+# Evaluation framework
 
-No scores are reported yet. Metrics below define how a future prototype would be judged.
+No scores reported. Metrics for a future prototype:
 
-| Metric | Type | Definition (sketch) | Pass idea (to be set pre-test) |
-|--------|------|---------------------|--------------------------------|
-| Retrieval precision@k | RAG | Relevant docs in top-k | Pre-registered threshold |
-| Grounded answer accuracy | RAG | Human raters: supported / partial / hallucinated | Hallucination rate below threshold |
-| Extraction F1 | NLP | Fields vs gold requirements | Pre-registered |
-| Forecast MAE/MAPE | ML | Vs held-out seasons | Better than naive baseline |
-| Match NDCG / precision@n | ML | Vs officer gold shortlists | Beats random/heuristic |
-| Procurement lead time | Outcome | Days from need to secured tonnage | Pilot A/B if ethical/feasible |
-| Supply visibility score | Outcome | % of required tonnage with named sources ≥N days ahead | Interview + logs |
-| Task completion | UX | Officer completes RFQ shortlist unaided | Usability study |
-| Latency | Systems | p50/p95 response time | Fit for low bandwidth |
-| Compute cost | Systems | ¢ per query | Sustainability bound |
-| Offline / low-connectivity mode | Systems | Task success on degraded link | Defined scenarios |
+- Retrieval precision@k  
+- Grounded-answer accuracy (supported / partial / hallucinated)  
+- Extraction F1 on requirements  
+- Forecast MAE/MAPE vs naive baseline  
+- Match ranking quality vs officer gold shortlists  
+- Latency and cost per query under low-bandwidth assumptions  
+- Task completion in usability tests  
 
-**Rule:** Do not publish marketing performance claims without the eval set, protocol, and confidence intervals.
+Do not publish performance claims without protocol, dataset, and uncertainty.

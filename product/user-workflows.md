@@ -1,28 +1,19 @@
-# User workflows (PROPOSED)
+# User workflows (proposed)
 
-No workflow below has been usability-tested with processors.
+Not usability-tested.
 
 ## Processor procurement officer
 
-1. Enter or upload a requirement (tonnage, window, quality, delivery point, max price).  
-2. Ask: “Which aggregators in Northern Region typically deliver Grade X by November?”  
-3. System retrieves structured records + documents; returns cited answer + uncertainty.  
-4. Review match list ranked by classical scorer (distance, historical fulfilment, quality).  
-5. Export shortlist to CSV / share with finance—not execute trade.
+1. Enter a requirement (quantity, timing, quality, location, constraints).  
+2. Query available context (structured records and documents, when present).  
+3. Review cited answers and uncertainty flags.  
+4. Inspect a ranked shortlist from a transparent scoring rule.  
+5. Export or share internally—no automated purchase.
 
-## Aggregator (optional later phase)
+## Aggregator (later, if data-sharing is viable)
 
-1. Publish available lots (quantity, location, moisture, price indication).  
-2. Respond to processor RFQs surfaced by the system.  
-3. Update fulfilment status (builds reputation features—future).
+Publish or update available lots; respond to RFQs; optional fulfilment status.
 
-## Analyst / researcher
+## Explicit non-workflows
 
-1. Query public MoFA/USDA/GCX digests via RAG.  
-2. Inspect forecast residuals and data gaps.
-
-## Explicit non-workflows (validation stage)
-
-- Automatic purchase orders  
-- Guaranteed offtake  
-- Farmer credit scoring as a first feature
+Automatic POs; guaranteed offtake; farmer credit as a first feature.
