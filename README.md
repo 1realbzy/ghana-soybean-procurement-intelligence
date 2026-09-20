@@ -6,7 +6,7 @@ Early-stage research and technical design for an AI-based procurement intelligen
 
 This project investigates whether combining structured agricultural data, retrieval, an efficient open-weight language model, and conventional machine learning can help processors source suitable local soybeans more effectively.
 
-Desk research documents a processor-side challenge around crush utilisation, fragmented northern supply, thin formal markets, and meal imports alongside bean exports. Whether limited information and coordination are a material, addressable part of that challenge is still an open question. The work is at validation stage: research and design exist; interviews, datasets, and model evaluations do not.
+Desk research documents a processor-side challenge around crush utilisation, fragmented northern supply, thin formal markets, and meal imports alongside bean exports. Whether limited information and coordination are a material, addressable part of that challenge is still an open question. The work is at idea stage, supported by desk research and an initial technical design. The core problem hypothesis has not yet been validated with processors or other supply chain participants.
 
 ## Problem
 
@@ -98,9 +98,9 @@ Technical implications specific to this setting, not slogans:
 
 ## Current stage
 
-**Validation stage.**
+**Idea stage.**
 
-Completed: desk research on the Ghana soybean chain, constraint map, product hypothesis, architecture sketch, data requirements, falsifiable hypotheses, and interview plans.
+Completed: desk research on the Ghana soybean chain, constraint mapping, a product hypothesis, architecture sketch, data requirements, falsifiable hypotheses, and a validation plan.
 
 Not completed: stakeholder interviews, consented procurement datasets, any model training or evaluation, user testing, commercial validation, or a runnable prototype.
 
@@ -113,7 +113,7 @@ Not completed: stakeholder interviews, consented procurement datasets, any model
 - Solution concept and user workflows
 - System architecture and data schema
 - Language-model, retrieval, and forecasting strategy (design only)
-- Validation hypotheses, interview plan, and metrics
+- Falsifiable hypotheses, interview plan, and metrics
 
 ## What has not been validated
 
