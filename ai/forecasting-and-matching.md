@@ -1,11 +1,11 @@
 # Forecasting and matching
 
-## Forecasting (proposed methods)
+## Forecasting
 
-District availability and price indicators via baselines / simple ML with MAE or MAPE on held-out seasons. Features might include history, rainfall, area, and quotes—only after data exist.
+District availability and price indicators via baselines or simple ML, scored with MAE or MAPE on held-out seasons. Features might include history, rainfall, area, and quotes — only after data exist.
 
-## Matching (proposed)
+## Matching
 
-Transparent score over quality fit, quantity fit, timing, logistics, and reliability weights set with procurement staff—not guessed as optimal here.
+Transparent score over quality fit, quantity fit, timing, logistics, and reliability. Weights set with procurement staff, not guessed as optimal here.
 
-LLMs may narrate outputs; they should not replace the scorer.
+A language model may narrate outputs. It should not replace the scorer.

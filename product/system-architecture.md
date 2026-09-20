@@ -1,11 +1,15 @@
-# System architecture (proposed)
+# System architecture
+
+Proposed. Not implemented.
 
 ```
 User interface
     ↓
-Procurement intelligence layer (answers, shortlists, alerts, uncertainty)
+Procurement intelligence (answers, shortlists, alerts, uncertainty)
     ↓
-Language/model layer (candidate)  ↔  Classical forecast/match/risk methods
+Language model layer (open-weight candidates)
+    ↔
+Classical forecast / match / risk methods
     ↓
 Retrieval index + structured agricultural data
     ↓
@@ -16,7 +20,7 @@ Ingestion (public stats, consented private records, documents, geo/weather)
 
 | Component | Status |
 |-----------|--------|
-| All layers above | Proposed — not implemented in this repository |
-| Stub APIs / demo backends | Intentionally omitted |
+| All layers above | Proposed |
+| APIs, indexes, trained models | Not in this repository |
 
-Deployment (cloud vs on-prem vs edge-light) is undecided and depends on partner security requirements after validation.
+Hosting (cloud, private VPC, or on-prem) is undecided and depends on partner security requirements after validation.

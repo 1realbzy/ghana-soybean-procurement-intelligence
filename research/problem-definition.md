@@ -1,21 +1,21 @@
 # Problem definition
 
-## Observed problem
+## Observation
 
-Ghanaian soybean processors face difficulties securing sufficient quantities of suitable local soybeans and operating consistently against available processing capacity. Desk evidence points to underused crush capacity, geographically concentrated and fragmented supply, thin formal market liquidity, meal imports alongside bean exports, and quality and policy frictions (see [evidence.md](evidence.md)).
+Ghanaian soybean processors face difficulties securing sufficient quantities of suitable local soybeans and operating consistently against available processing capacity. Desk evidence points to underused crush capacity, geographically concentrated and fragmented supply, thin formal market liquidity, meal imports alongside bean exports, and quality and policy frictions. See [market-evidence.md](market-evidence.md).
 
-## What desk research does not establish
+## Open question
 
-Desk research does **not** establish that inadequate digital supply visibility is the primary cause of underutilisation or grain shortfalls. Relative importance of constraints across firms is unknown without primary research.
+Desk research does **not** establish that inadequate supply visibility is the primary cause of underutilisation. Relative importance of constraints across firms is unknown without primary research.
 
-## Research hypothesis
+## Hypothesis
 
-Some portion of the observed problem may arise from fragmented supply information, limited visibility into available quantities and timing, quality uncertainty, and weak coordination among processors, aggregators, and producer networks.
+Some portion of the observed problem may arise from fragmented supply information, limited visibility into quantities and timing, quality uncertainty, and weak coordination among processors, aggregators, and producer networks.
 
-## Proposed intervention (conditional)
+## Proposed design (conditional)
 
-If primary research supports that hypothesis, develop a procurement intelligence system that aggregates relevant supply, market, geographic, weather, and procurement information and helps processors make better-informed sourcing decisions.
+If primary research supports that hypothesis, develop a procurement intelligence system that connects processor requirements with relevant agricultural supply information and surfaces evidence under uncertainty.
 
-## Validation requirement
+## Future test
 
-Primary research must establish whether an information and coordination layer is a sufficiently important and addressable problem before treating any product concept as validated.
+Primary interviews and, if justified, shadow exercises must show whether an information layer ranks high enough among constraints and changes buying behaviour before treating the product concept as validated.

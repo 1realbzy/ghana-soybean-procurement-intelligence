@@ -8,4 +8,4 @@
 | H4 | Aggregators or producer organisations can and would share usable lot- or network-level data under workable consent | They refuse, cannot, or data are too unreliable |
 | H5 | Processors would adopt a paid or actively used intelligence workflow if accuracy/trust thresholds are met | Stated non-interest and/or non-use in a pilot |
 
-**Status: none validated.**
+Status: none tested.

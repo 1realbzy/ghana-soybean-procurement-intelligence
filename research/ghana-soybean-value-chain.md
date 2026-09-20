@@ -1,6 +1,6 @@
 # Ghana soybean value chain (desk)
 
-Labels: FACT (from cited source) · COMPANY CLAIM · ANALYST INTERPRETATION · INSUFFICIENT EVIDENCE.
+Labels: FACT · COMPANY CLAIM · ANALYST INTERPRETATION · INSUFFICIENT EVIDENCE.
 
 ## Production
 
@@ -17,7 +17,7 @@ Do not average MoFA 2024 and USDA MY2024/25 figures.
 
 ## Consumption
 
-Feed &gt;85% of use (MoFA PFJ 2.0 via USDA). Domestic use (bean basis) ~198–225k MT MY2023/24–2024/25 (USDA). PFJ 2.0 aspirational 976k MT by 2028 is a **policy target**, not an outcome.
+Feed &gt;85% of use (MoFA PFJ 2.0 via USDA). Domestic use (bean basis) ~198–225k MT MY2023/24–2024/25 (USDA). PFJ 2.0 aspirational 976k MT by 2028 is a policy target, not an outcome.
 
 ## Crush
 
@@ -25,16 +25,16 @@ Feed &gt;85% of use (MoFA PFJ 2.0 via USDA). Domestic use (bean basis) ~198–22
 
 ## Trade
 
-Bean imports small; grain duty 10% CIF. SBM imports ~60k MT recent MYs; WITS HS 2304 ~US$44.42m CY2023 (AR/US/NG prominent). SBM duty often waived in practice (USDA). Bean exports: MoFA US$17.66m (2022); USDA Post 50–60k MT forecast class; permits since ~2021 (USDA).
+Bean imports small; grain duty 10% CIF. SBM imports ~60k MT recent MYs; WITS HS 2304 ~US$44.42m CY2023. SBM duty often waived in practice (USDA). Bean exports: MoFA US$17.66m (2022); USDA Post 50–60k MT forecast class; permits since ~2021 (USDA).
 
 ## Prices (snapshots)
 
-Beans ~GH¢8,000/t (Feb 2023), ~GH¢5,250/t (Apr 2024). Domestic/imported SBM GH¢415 / GH¢480 per 50kg (Apr 2024). GCX ~GH¢8,311/t (2024 FSR summary). Crushing margins: **INSUFFICIENT EVIDENCE**.
+Beans ~GH¢8,000/t (Feb 2023), ~GH¢5,250/t (Apr 2024). Domestic/imported SBM GH¢415 / GH¢480 per 50kg (Apr 2024). GCX ~GH¢8,311/t (2024 FSR summary). Crushing margins: INSUFFICIENT EVIDENCE.
 
 ## Storage / exchange
 
-GCX soy 512 MT in 2024. National soy PHL %: **INSUFFICIENT EVIDENCE** in this desk pack.
+GCX soy 512 MT in 2024. National soy post-harvest loss %: INSUFFICIENT EVIDENCE in this desk pack.
 
 ## Actors (discovery only)
 
-Northern smallholders; traders/aggregators; export-linked buyers (USDA narrative); ~13 large crushers + SMEs; meal importers; feed millers (AFMOG context). No firm listed here is a customer or partner.
+Northern smallholders; traders/aggregators; export-linked buyers (USDA narrative); ~13 large crushers + SMEs; meal importers; feed millers. No firm listed here is a customer or partner.

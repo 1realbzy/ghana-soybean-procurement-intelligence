@@ -1,19 +1,19 @@
-# User workflows (proposed)
+# User workflows
 
-Not usability-tested.
+Proposed only. Not usability-tested.
 
 ## Processor procurement officer
 
-1. Enter a requirement (quantity, timing, quality, location, constraints).  
-2. Query available context (structured records and documents, when present).  
-3. Review cited answers and uncertainty flags.  
-4. Inspect a ranked shortlist from a transparent scoring rule.  
-5. Export or share internally—no automated purchase.
+1. Enter a requirement (quantity, timing, quality, location, constraints).
+2. Query available context from structured records and documents when present.
+3. Review cited answers and uncertainty flags.
+4. Inspect a ranked shortlist from a transparent scoring rule.
+5. Export or share internally — no automated purchase.
 
-## Aggregator (later, if data-sharing is viable)
+## Aggregator (later)
 
-Publish or update available lots; respond to RFQs; optional fulfilment status.
+Publish or update available lots; respond to RFQs; optional fulfilment status — only if sharing incentives work.
 
-## Explicit non-workflows
+## Not in scope as first workflows
 
-Automatic POs; guaranteed offtake; farmer credit as a first feature.
+Automatic purchase orders; guaranteed offtake; farmer credit as the entry feature.

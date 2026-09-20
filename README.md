@@ -1,109 +1,158 @@
 # Ghana Soybean Procurement Intelligence
 
-Validation-stage research on whether an information and coordination layer can help Ghanaian soybean processors source suitable local beans more effectively.
+Early-stage research and technical design for an AI-based procurement intelligence system aimed at Ghanaian soybean processors.
 
-## Status
+## Overview
 
-**Validation stage.** Desk research on Ghana’s soybean crush, trade, and supply structure is complete. A falsifiable product hypothesis and technical sketch exist. No stakeholder interviews have been run, no production system is deployed, and no model has been integrated or evaluated on Ghanaian procurement data.
+This project investigates whether combining structured agricultural data, retrieval, an efficient open-weight language model, and conventional machine learning can help processors source suitable local soybeans more effectively.
+
+Desk research documents a processor-side challenge around crush utilisation, fragmented northern supply, thin formal markets, and meal imports alongside bean exports. Whether limited information and coordination are a material, addressable part of that challenge is still an open question. The work is at validation stage: research and design exist; interviews, datasets, and model evaluations do not.
 
 ## Problem
 
-Ghanaian soybean processors operate crushing capacity that industry surveys have reported as underused relative to installed capacity, with insufficient grain cited as a constraint (USDA GAIN GH2023-0006; USDA GAIN GH2024-0006, June 2024). Production is concentrated in northern Ghana and described as largely smallholder (USDA GAIN GH2024-0006). Formal exchange volumes for soybeans are small versus the crop (GCX soy traded 512 MT in 2024, per Financial Stability Review coverage). Ghana has imported soybean meal at material scale while also exporting beans ([WITS](https://wits.worldbank.org/) HS 2304; MoFA PBB export values; USDA oilseeds notes). Quality differences (including solvent-extracted versus expeller meal) and trade-policy asymmetries affect the economics of crushing versus importing meal (USDA GAIN GH2024-0006).
+Soybean processors in Ghana have been reported to run well below installed crushing capacity, with insufficient grain cited as a constraint (USDA GAIN GH2023-0006; GH2024-0006). Production is concentrated in the north and described as largely smallholder. Formal exchange volumes for soybeans are tiny relative to the crop. Soybean meal continues to be imported at material scale while beans are also exported. Quality differences (for example solvent-extracted versus expeller meal) and trade-policy asymmetries affect whether crushing local beans beats importing meal.
 
-Desk research therefore supports a **processor-side challenge in securing sufficient suitable local beans and running plants consistently against available capacity**. It does **not** establish which constraint binds most for which firms: grain scarcity, working capital, quality, logistics, export competition, trade policy, information, or some mix.
+What remains unclear is how much of any given plant’s shortfall comes from absolute scarcity, working capital, quality rejects, export competition, logistics, policy, or late/incomplete information about available supply. This project focuses on the last class of explanations without assuming it is primary.
 
-## Why soybean procurement?
+The working product hypothesis is that processors often lack timely, trustworthy visibility into where supply exists, expected production, harvest timing, available quantities, quality, prices, producer and aggregator networks, geography, logistics, emerging gaps, and procurement risk — and that a better information layer could help if those factors matter enough in practice.
 
-1. **Crush underuse.** USDA’s 2023 industry survey cites about 13 large processors with roughly 172,000 MT/year installed grain capacity and about 72,000 MT/year actual throughput (USDA GAIN GH2023-0006).
-2. **Grain cited as a constraint.** Later USDA oilseeds notes describe utilisation below about 70% with insufficient grain as the industry narrative (USDA GAIN GH2024-0006).
-3. **Meal imports persist.** Soybean meal imports on the order of 60,000 MT in recent marketing years; WITS reports about US$44.4 million of HS 2304 imports in calendar 2023 (USDA GAIN GH2024-0006; [WITS](https://wits.worldbank.org/)).
-4. **Policy and quality frictions.** Grain import duty versus practical treatment of meal imports, and buyer preference for higher-protein solvent meal, shape crush economics (USDA GAIN GH2024-0006).
-5. **Thin formal markets.** GCX soybean trade of 512 MT in 2024 is negligible relative to national production (FSR 2024 summary via press).
+## Why soybean?
 
-MoFA calendar-year production for 2024 (193,000 MT in PBB 2025) differs from USDA’s MY2024/25 production forecast (290,000 MT). Those series are not interchangeable; this repo does not average them. Details: [research/evidence.md](research/evidence.md).
+Soybean is a useful first commodity because the crush and feed complex is large enough to matter, utilisation and meal-import patterns are documented in public attaché and trade sources, and the supply base is geographically concentrated and fragmented. MoFA and USDA production series disagree for recent periods (for example MoFA 193k MT for 2024 versus USDA’s MY2024/25 forecast of 290k MT); those figures are not averaged here. Detail sits in [research/](research/).
 
-## The hypothesis
+## Target users
 
-**We are investigating whether** a material share of processors’ difficulty securing suitable local beans arises from fragmented supply information, limited visibility into available quantities and timing, quality uncertainty, and weak coordination among processors, aggregators, and producer networks.
+**Primary:** Ghanaian soybean processors (procurement and operations staff).
 
-That hypothesis is open. Competing explanations (working capital, tariffs, quality technology, export offtake, logistics) remain live. Primary research must rank them.
+**Secondary (if data-sharing proves viable):** aggregators, producer organisations, farmer networks/cooperatives, and logistics actors who sit between farm and plant.
 
-## What we are exploring
+No organisation named in this repository is a customer or partner.
 
-If primary research supports the hypothesis, a useful product would be a **procurement intelligence** workflow: help a processor state requirements; surface relevant supply, market, and document context; flag uncertainty; and support shortlisting of sourcing options. It would not execute trades, extend credit, or guarantee offtake.
+## Evidence
 
-Product concept (still a hypothesis): [product/solution-concept.md](product/solution-concept.md).
+Strongest desk anchors (not a claim that information failure is proven):
 
-## Technical direction
+1. Large crushers: roughly 172k MT/yr installed grain capacity versus about 72k MT/yr actual throughput in a 2023 industry survey (USDA GAIN GH2023-0006).
+2. Utilisation narrative below about 70%, with insufficient grain cited (USDA GAIN GH2024-0006).
+3. Soybean meal imports on the order of 60k MT in recent marketing years; HS 2304 imports about US$44.4m in calendar 2023 (USDA; World Bank WITS).
+4. Grain import duty versus practical treatment of meal imports, plus preference for higher-protein solvent meal (USDA GH2024-0006).
+5. GCX soybean trade of 512 MT in 2024 — negligible formal liquidity (Financial Stability Review coverage).
+6. Northern smallholder geography versus southern/central crush locations (USDA qualitative structure).
 
-Proposed pipeline (nothing below is claimed as implemented):
+Full notes and conflicting series: [research/market-evidence.md](research/market-evidence.md), [research/sources.md](research/sources.md).
+
+## Proposed system
+
+If validation supports the information hypothesis, the product would be a **procurement intelligence** layer: take a processor’s requirements, retrieve relevant supply and market context with provenance, flag uncertainty, and support shortlisting of sourcing options.
+
+It would not execute trades, extend credit, or guarantee offtake. It is not “a chatbot for farmers.” The language model, if used, is an interface and extraction component inside a broader data and decision system.
+
+Intended questions to help answer later (not claimed as working today): what supply may be available; where and when; whether it matches requirements; what quality information exists; what gaps or risks to investigate; what evidence supports a recommendation.
+
+## Technical architecture
+
+Proposed pipeline. Nothing below is implemented in this repository.
 
 ```
-ingestion (public stats, consented private records, documents, geo/weather)
-    → validation / normalisation / provenance
-    → structured data layer + retrieval index
-    → language / model layer (candidate)  ↔  forecasting / matching (classical methods)
-    → procurement intelligence interface
+Agricultural data
+        ↓
+Data ingestion
+        ↓
+Validation / normalisation / provenance
+        ↓
+Structured agricultural data layer
+        ↓
+Retrieval / knowledge layer
+        ↓
+Language model layer (open-weight candidates)
+        ↔
+Forecasting / matching / risk models (classical ML / stats)
+        ↓
+Procurement intelligence
+        ↓
+User interface
 ```
 
-Language models are a **candidate** for natural-language queries, extraction, and document interfaces—not a predetermined requirement. Volume, price, and match scores should come from transparent statistical or ML methods with measurable error. Detail: [ai/technical-direction.md](ai/technical-direction.md), [product/system-architecture.md](product/system-architecture.md).
+See [product/system-architecture.md](product/system-architecture.md).
 
-## Why Mistral could fit
+## AI strategy
 
-If validation shows a language/RAG workflow is needed, efficient open-weight models (including Mistral family checkpoints) are candidates for:
+Language models are for natural-language interaction, requirement and document extraction, retrieval-grounded answers, summarisation, and multilingual prompts only if evaluation supports it.
 
-- natural-language interaction with procurement staff  
-- information extraction from unstructured notes or documents  
-- retrieval-grounded answers with citations  
-- multilingual prompts **only if** evaluation supports it  
+Forecasting, price analysis, matching, ranking, and risk scores should use conventional statistical or ML methods with measurable error. The model layer is **model-agnostic**: candidate open-weight models are chosen later by evaluation, not by brand preference. See [ai/language-model-strategy.md](ai/language-model-strategy.md).
 
-Numerical forecasting and ranking would not rely on an LLM as the primary calculator. Model choice depends on later evaluation (accuracy, latency, cost, deployment constraints)—not on this README. See [ai/mistral-strategy.md](ai/mistral-strategy.md).
+## Data requirements
 
-## Current work
+Public production and trade stats, price panels, geography/weather, quality specs, and — if partners consent — processor purchase histories and aggregator or producer-organisation lot data. Without consented operational data, public PDFs alone are unlikely to beat existing buyer networks. See [product/data-requirements.md](product/data-requirements.md) and [data/schema.md](data/schema.md).
 
-- Ghana soybean value-chain desk research ([research/ghana-soybean-value-chain.md](research/ghana-soybean-value-chain.md))
-- Evidence audit with confidence labels ([research/evidence.md](research/evidence.md))
-- Procurement constraint map ([research/procurement-constraints.md](research/procurement-constraints.md))
-- Problem definition separating observation from hypothesis ([research/problem-definition.md](research/problem-definition.md))
-- Product hypothesis and workflows ([product/](product/))
-- Data requirements and logical schema ([product/data-requirements.md](product/data-requirements.md))
-- Technical direction and evaluation plan ([ai/](ai/))
-- Falsifiable hypotheses and interview guides ([validation/](validation/))
+## African / Ghanaian context
 
-No runnable prototype is in this repository yet ([prototype/README.md](prototype/README.md)).
+Technical implications specific to this setting, not slogans:
 
-## What we do not know yet
+- **Fragmented supply:** many small northern farms and trader networks; formal exchange covers almost none of the crop.
+- **Local data:** MoFA, trade, and attaché series exist but conflict or lag; firm-level intake data are private.
+- **Connectivity:** interfaces must tolerate intermittent links and low bandwidth; heavy cloud-only demos are a poor fit until proven otherwise.
+- **Data governance:** processor and aggregator records are commercially sensitive; consent and on-prem or private hosting may be required.
+- **Language:** English dominates formal procurement; local-language support is an evaluation question, not a default claim.
+- **Deployment:** model size, quantisation, and offline or edge-light options matter more than leaderboard scores.
 
-- Relative importance of information/visibility versus capital, quality, policy, logistics, and export competition  
-- Actual end-to-end procurement workflows inside crushers  
-- Availability and reliability of lot-level or network-level supply data  
-- Willingness of processors, aggregators, and producer organisations to share data  
-- Whether better information changes purchase decisions  
-- Competitive tools already in use  
-- Willingness to adopt or pay for an intelligence workflow  
+## Current stage
+
+**Validation stage.**
+
+Completed: desk research on the Ghana soybean chain, constraint map, product hypothesis, architecture sketch, data requirements, falsifiable hypotheses, and interview plans.
+
+Not completed: stakeholder interviews, consented procurement datasets, any model training or evaluation, user testing, commercial validation, or a runnable prototype.
+
+## What has been done
+
+- Ghana soybean value-chain desk research
+- Procurement bottleneck and constraint analysis
+- Market evidence notes with source labels
+- Problem definition separating observation from hypothesis
+- Solution concept and user workflows
+- System architecture and data schema
+- Language-model, retrieval, and forecasting strategy (design only)
+- Validation hypotheses, interview plan, and metrics
+
+## What has not been validated
+
+- Processor and aggregator interviews
+- Producer-organisation interviews
+- Real procurement microdata
+- Model performance of any kind
+- User adoption
+- Willingness to pay
+- Production deployment
+- That information/visibility is a primary binding constraint
 
 ## Validation plan
 
-Next stage is primary discovery with processors, aggregators, and producer organisations using falsifiable hypotheses H1–H5 and the interview guides in [validation/](validation/). No interviews in this repo’s evidence base have been completed.
-
-## Research gaps
-
-Named firm-level capacity and utilisation for recent seasons; reconciled official trade series; solvent versus expeller meal share; export-permit enforcement detail; crushing margins; national soy post-harvest loss rates; competitor landscape; primary user evidence on constraint ranking. Full list: [research/evidence.md](research/evidence.md).
+Test hypotheses H1–H5 with processors, aggregators, and producer organisations using the interview plan in [validation/](validation/). Advance only if discovery shows information and coordination matter enough, and a data path exists. Otherwise pivot or stop.
 
 ## Roadmap
 
-1. Primary stakeholder discovery  
-2. Validate procurement workflow and constraint ranking  
-3. Obtain representative consented data (if justified)  
-4. Build a narrow prototype only after workflow clarity  
-5. Test with users  
-6. Evaluate technical and commercial viability  
-7. Proceed, pivot, or stop  
+1. Stakeholder discovery  
+2. Data acquisition (consented)  
+3. Data preparation  
+4. Initial prototype  
+5. Model evaluation  
+6. User testing  
+7. Iteration  
+8. Commercial validation  
 
-## Research sources
+## Research
 
-Primary table: [research/sources.md](research/sources.md). Key anchors: USDA GAIN GH2023-0006 and GH2024-0006; MoFA Programme Based Budget production/export series; World Bank WITS HS 2304 (2023); GCX volumes via Financial Stability Review coverage.
+- [Problem definition](research/problem-definition.md)
+- [Value chain](research/ghana-soybean-value-chain.md)
+- [Procurement bottlenecks](research/procurement-bottlenecks.md)
+- [Market evidence](research/market-evidence.md)
+- [Sources](research/sources.md)
 
-## Disclaimer
+## License
 
-This repository documents early-stage research and technical exploration. It does not represent a deployed commercial product or validated production system.
+MIT — see [LICENSE](LICENSE).
+
+---
+
+This repository documents early research and technical exploration. It is not a deployed commercial product.
