@@ -34,9 +34,9 @@ Strongest desk anchors (not a claim that information failure is proven):
 
 1. Large crushers: roughly 172k MT/yr installed grain capacity versus about 72k MT/yr actual throughput in a 2023 industry survey (USDA GAIN GH2023-0006).
 2. Utilisation narrative below about 70%, with insufficient grain cited (USDA GAIN GH2024-0006).
-3. Soybean meal imports on the order of 60k MT in recent marketing years; HS 2304 imports about US$44.4m in calendar 2023 (USDA; World Bank WITS).
+3. Soybean meal imports on the order of 60k MT in recent marketing years (USDA). Live UN Comtrade public preview for calendar year 2022 shows Ghana HS 2304 imports about US$50.57m CIF (~92.9k MT net weight; World aggregate, TOTAL MOT).
 4. Grain import duty versus practical treatment of meal imports, plus preference for higher-protein solvent meal (USDA GH2024-0006).
-5. GCX soybean trade of 512 MT in 2024 — negligible formal liquidity (Financial Stability Review coverage).
+5. GCX soybean trade of 511.65 MT in 2024 — negligible formal liquidity (Bank of Ghana Financial Stability Review 2024 PDF; press often rounds to 512).
 6. Northern smallholder geography versus southern/central crush locations (USDA qualitative structure).
 
 Full notes and conflicting series: [research/market-evidence.md](research/market-evidence.md), [research/sources.md](research/sources.md).
@@ -148,6 +148,8 @@ Test hypotheses H1–H5 with processors, aggregators, and producer organisations
 - [Procurement bottlenecks](research/procurement-bottlenecks.md)
 - [Market evidence](research/market-evidence.md)
 - [Sources](research/sources.md)
+- [Public data source assessment](research/public-data-source-assessment.md)
+- [Public vs private data boundary](research/public-vs-private-data-boundary.md)
 
 ## License
 
